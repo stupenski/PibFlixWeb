@@ -1,0 +1,53 @@
+<content [scrollEvents] = "true" (ionScroll) = "onScroll($event)">
+    <div #header class = "header">
+      
+      <grid>
+        <row class = "ion-text-left  ion-align-item-center">
+          <col size = "2">
+            <img src = "/assets/img/logo.png">
+          </col>
+          <button routerLink="/login" fill ='clear' class='exit' >Sair</button>
+        </row>
+      </grid>
+    </div>
+  
+  
+    <br>
+    <br>
+    <br>
+    <br>
+  
+  
+    <div class="content ion-padding">
+      <div class="title ion-margin-vertical">
+        <span>Prévias</span>
+      </div>
+  
+      <slides class = "stories" [options] = "slidesOptions">
+        <slide *ngFor= "let story of stories">
+          <img [src] = "story.Poster"></img> <!--Em folder.page.ts tem imagem poster com tal propriedade (Poster)-->
+        </slide>
+      </slides>
+  
+      <div class="title ion-margin-vertical">
+        <span>Minha Lista</span>
+      </div>
+  
+      <slides class = "lists" [options] = "slidesOptions">
+        <slide *ngFor= "let movie of movies">
+          <img [src] = "movie.Poster"></img> <!--Em folder.page.ts tem imagem do movie poster-->
+        </slide>
+      </slides>
+  
+      <div class="title ion-margin-vertical">
+        <span>Continuar assistindo</span>
+      </div>
+  
+      <slides class = "lists" [options] = "slidesOptions">
+        <slide *ngFor= "let movie of movies">
+          <img [src] = "movie.Poster"></img> <!--Em folder.page.ts tem imagem do movie poster-->
+        </slide>
+      </slides>
+    </div>
+  </content>
+  
